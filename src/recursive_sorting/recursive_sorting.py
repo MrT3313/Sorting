@@ -32,6 +32,11 @@ def merge_sort( arr ):
         arr = merge( left, right )   # merge() defined later
     return arr
 
+    # call stack
+
+    # up vs down recursive loop
+        #
+
 print(merge_sort([1,4,7,4,2,6,4,7,87,2,54,3]))
 
 
