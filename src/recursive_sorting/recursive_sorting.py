@@ -1,23 +1,28 @@
 ### helper function
 def merge( arrA, arrB ):
     elements = len( arrA ) + len( arrB )
-    merged_arr = [0] * elements
+    merged_arr = [0] * elements       
     A_counter = 0
     B_counter = 0
+
     # since arrA and arrB already sorted, we only need to compare the first element of each when merging!
     for i in range( 0, elements ):
         if A_counter >= len(arrA):    
             merged_arr[i] = arrB[B_counter]
             B_counter += 1
+
         elif B_counter >= len(arrB):  
             merged_arr[i] = arrA[A_counter]
             A_counter += 1
+
         elif arrA[A_counter] < arrB[B_counter]:  
             merged_arr[i] = arrA[A_counter]
             A_counter += 1
+
         else:  
             merged_arr[i] = arrB[B_counter]
             B_counter += 1
+
     return merged_arr
 
 def merge_sort( arr ):
